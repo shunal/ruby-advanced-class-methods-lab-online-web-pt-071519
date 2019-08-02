@@ -42,4 +42,12 @@ class Song
   def self.alphabetical
     @@all.sort_by{|x| x.name}
   end
+  
+  def self.new_from_filename(file_mp3)
+    song = Song.new
+    song.name = "Blank Space"
+    file_mp3
+    song.artist_name =
+    
+  end 
 end
