@@ -44,10 +44,20 @@ class Song
   end
   
   def self.new_from_filename(file_mp3)
-    song = Song.new
-    song.name = "Blank Space"
-    file_mp3
-    song.artist_name =
+    song = self.new
+    song.name = file_mp3.split(" - ").chomp(".mp3")
+    song.artist_name = (file_mp3.split)[0]
+    self.all << song
+    
+   
+    # song = self.new
+    # song.name = (file_mp3.split(" - ")[1].chomp(".mp3"))
+    # song.artist_name = (file_mp3.split(" - ")[0])
+    # @@all << song
+    # song
+
+  
+    
     
   end 
 end
